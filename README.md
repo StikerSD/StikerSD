@@ -1,28 +1,18 @@
 # Lucas Guerra Lima
 
-Estudante de Engenharia de Computação no SENAI CIMATEC, em Salvador (BA).
-Meu interesse está em sistemas embarcados, IoT e automação industrial.
+Computer Engineering student at SENAI CIMATEC, Salvador (BA), Brazil.
+C++, Python, TypeScript, Java.
 
-**Linguagens:** C++ · Python · TypeScript · Java
+## [ESP32-Braille](https://github.com/StikerSD/ESP32-Braille)
 
-### Projetos
+6-dot braille keyboard. A chord is pressed and released; the matching letter is
+shown on an SSD1306 OLED.
 
-- **[ESP32-Braille](https://github.com/StikerSD/ESP32-Braille)** — teclado braille
-  de 6 pontos em C++ sobre ESP32, com encoder de prioridade 74HC147 e display
-  OLED SSD1306 via I2C. O 74HC147 só reporta um pino por vez, então o acorde
-  inteiro é lido por uma varredura que usa GPIOs como terra programável,
-  mascarando cada ponto já identificado. Debounce por contador de confirmação.
+The 74HC147 priority encoder reports only the highest active input, so a chord
+cannot be read in a single pass. Each dot already identified is masked by driving
+its GPIO high — the pin acts as a programmable ground — and the encoder is read
+again until no input remains. Dots are debounced with a confirmation counter.
 
-- **notifiq** *(privado)* — ERP de gestão financeira com integração ao WhatsApp,
-  voltado a micro e pequenas empresas.
+**Stack:** `C++` `ESP32` `74HC147` `SSD1306` `I2C` `PlatformIO`
 
-### Formação e certificações
-
-- Engenharia de Computação — SENAI CIMATEC (cursando, desde 2026)
-- Fortinet Certified Fundamentals / NSE 1 (2026)
-
-### Publicação
-
-- **A construção de um Health Game para o Suporte Básico de Vida: estratégia
-  para o ensino-aprendizagem na saúde** — STAES19, Seminário de Tecnologias
-  Aplicadas em Educação e Saúde. Trabalho derivado de Iniciação Científica.
+![ESP32-Braille wiring](esp32-braille-wiring.webp)
