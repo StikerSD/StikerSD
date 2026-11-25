@@ -10,6 +10,6 @@
 6-dot braille keyboard: chorded input read through a 74HC147 priority encoder,
 output on an SSD1306 OLED.
 
-**Hardware:** `ESP32` `74HC147` `SSD1306` `I2C` — built with PlatformIO
+**Hardware:** `ESP32` `74HC147` `SSD1306` `I2C` - built with PlatformIO
 
 ![ESP32-Braille wiring](esp32-braille-wiring.webp)
